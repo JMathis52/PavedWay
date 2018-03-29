@@ -7,9 +7,7 @@ Live Version: *still in development*
 * **Stash Sierputowski**
 * **Andrew Schwartz**
 
-##Project Client
+## Project Client
 * **Pearson Brown**
 
 ### Acknowledgments
-
-**Testing Changes**
