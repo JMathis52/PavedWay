@@ -3,8 +3,13 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { CoursesPage } from '../pages/courses/courses';
+import { ExtrasPage } from '../pages/extras/extras';
+import { GroupsPage } from '../pages/groups/groups';
+import { ProfilePage } from '../pages/profile/profile';
+import { CareerPage } from '../pages/career/career';
+import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,8 +17,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    CalendarPage,
+    CoursesPage,
+    ExtrasPage,
+    GroupsPage,
+    ProfilePage,
+    CareerPage,
+    MyPavedWayPage
   ],
   imports: [
     BrowserModule,
@@ -22,8 +32,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    CalendarPage,
+    CoursesPage,
+    ExtrasPage,
+    GroupsPage,
+    ProfilePage,
+    CareerPage,
+    MyPavedWayPage
   ],
   providers: [
     StatusBar,

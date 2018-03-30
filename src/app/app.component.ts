@@ -3,8 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { CoursesPage } from '../pages/courses/courses';
+import { ExtrasPage } from '../pages/extras/extras';
+import { GroupsPage } from '../pages/groups/groups';
+import { ProfilePage } from '../pages/profile/profile';
+import { CareerPage } from '../pages/career/career';
+import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = MyPavedWayPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +26,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Profile', component: ProfilePage },
+      { title: 'My Paved Way', component: MyPavedWayPage },
+      { title: 'Courses', component: CoursesPage },
+      { title: 'Extracurriculars', component: ExtrasPage },
+      { title: 'Career', component: CareerPage },
+      { title: 'Groups', component: GroupsPage },
+      { title: 'Calendar', component: CalendarPage }
     ];
 
   }
