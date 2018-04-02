@@ -6,7 +6,7 @@
 -->
 
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -16,5 +16,34 @@
 
 
 <ion-content padding>
-
+  <div class="row">
+    <button ion-button class="btn" id="year1" (click)="highlight('year1')">Year 1</button>
+    <button ion-button class="btn" id="year2" (click)="highlight('year2')">Year 2</button>
+    <button ion-button class="btn" id="year3" (click)="highlight('year3')">Year 3</button>
+    <button ion-button class="btn" id="year4" (click)="highlight('year4')">Year 4</button>
+  </div>
+  <div class="row" id="courses">
+    <ion-card>
+      <ion-slides pager>
+        <ion-slide id="fall">
+          <ion-card-content>
+            <ion-card-title>Fall 2018</ion-card-title>
+            <p>Course Name</p>
+            <p>Course</p>
+            <p>Course</p>
+            <p>Course</p>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide id="spring">
+          <ion-card-content>
+            <ion-card-title>Spring 2019</ion-card-title>
+            <p>Course Name</p>
+            <p>Course</p>
+            <p>Course</p>
+            <p>Course</p>
+          </ion-card-content>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </div>
 </ion-content>
