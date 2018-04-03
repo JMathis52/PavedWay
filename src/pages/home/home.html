@@ -15,4 +15,34 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <ion-row>
+    <ion-col col-9>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="newClass" placeholder="Class" clearInput="true"></ion-input>
+      </ion-item>
+    </ion-col>
+    <button ion-button (click)="addClass()">
+      Add!
+    </button>
+  </ion-row>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let class of classes | async">
+      <ion-item>
+        {{class.$value}}
+      </ion-item>
+      <ion-item-options side="right">
+        <button iokn-button color="danger" icon-only (click)="removeClass(class.$key)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
+
+
+
+
+
+
