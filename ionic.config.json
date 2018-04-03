@@ -1,6 +1,6 @@
 {
   "name": "pavedWay",
-  "app_id": "",
+  "app_id": "7e171f6b",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

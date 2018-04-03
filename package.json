@@ -24,9 +24,14 @@
     "@ionic-native/core": "4.6.0",
     "@ionic-native/splash-screen": "4.6.0",
     "@ionic-native/status-bar": "4.6.0",
+    "@ionic/pro": "^1.0.20",
     "@ionic/storage": "2.1.3",
+<<<<<<< HEAD
     "angularfire2": "^4.0.0-rc0",
     "firebase": "^4.12.1",
+=======
+    "bootstrap": "^3.3.7",
+>>>>>>> 1b847678ff93d613923f1c54b7b0c888fb9ecc66
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.8",
@@ -34,7 +39,7 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.8",
+    "@ionic/app-scripts": "^3.1.8",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project"

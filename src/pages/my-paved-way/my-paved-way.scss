@@ -1,0 +1,44 @@
+.btn {
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+ion-content {
+  background-image: url("../assets/imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#year1 {
+  color: color($colors, primary);
+  background-color: color($colors, dark);
+}
+
+#year2, #year3, #year4 {
+  color: color($colors, dark);
+  background-color: color($colors, primary);
+}
+
+#courses {
+  margin-top: 5%;
+}
+
+#fall, #spring {
+  padding-bottom: 15px;
+}
+
+ion-card-header {
+  background-color: color($colors, dark);
+}
+
+ion-card-content {
+  div {background-color: color($colors, primary);}
+  background-color: color($colors, primary);
+}
+
+ion-list {
+  padding: 10px;
+}
