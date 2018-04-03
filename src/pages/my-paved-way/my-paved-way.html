@@ -7,7 +7,7 @@
 
 <ion-header>
   <ion-navbar color="primary">
-    <button ion-button menuToggle>
+    <button ion-button color="dark" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>My Paved Way</ion-title>
@@ -16,6 +16,7 @@
 
 
 <ion-content padding>
+  <!--Courses Card-->
   <div class="row">
     <button ion-button class="btn" id="year1" (click)="highlight('year1')">Year 1</button>
     <button ion-button class="btn" id="year2" (click)="highlight('year2')">Year 2</button>
@@ -24,26 +25,30 @@
   </div>
   <div class="row" id="courses">
     <ion-card>
-      <ion-slides pager>
-        <ion-slide id="fall">
-          <ion-card-content>
-            <ion-card-title>Fall 2018</ion-card-title>
-            <p>Course Name</p>
-            <p>Course</p>
-            <p>Course</p>
-            <p>Course</p>
-          </ion-card-content>
-        </ion-slide>
-        <ion-slide id="spring">
-          <ion-card-content>
-            <ion-card-title>Spring 2019</ion-card-title>
-            <p>Course Name</p>
-            <p>Course</p>
-            <p>Course</p>
-            <p>Course</p>
-          </ion-card-content>
-        </ion-slide>
-      </ion-slides>
+      <ion-card-header>
+        <ion-segment [(ngModel)]="semester">
+          <ion-segment-button value="fall">
+            Fall 2018
+          </ion-segment-button>
+          <ion-segment-button value="spring">
+            Spring 2019
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-header>
+
+      <ion-card-content [ngSwitch]="semester">
+        <div *ngSwitchCase="'fall'">
+          <ion-list no-lines *ngFor="let course of coursesFall">
+            {{course}}
+          </ion-list>
+        </div>
+        <div *ngSwitchCase="'spring'">
+          <ion-list no-lines *ngFor="let course of coursesSpring">
+            {{course}}
+          </ion-list>
+        </div>
+      </ion-card-content>
     </ion-card>
   </div>
+  <!--Courses Card END-->
 </ion-content>

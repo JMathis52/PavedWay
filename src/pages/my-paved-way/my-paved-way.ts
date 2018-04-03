@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
+
+//import { CoursesPage } from '../courses/courses';
 
 /**
  * Generated class for the MyPavedWayPage page.
@@ -14,13 +16,39 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class MyPavedWayPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  semester: string = "fall";
+  coursesFall = [
+    "CSCE 350",
+    "CSCE 311",
+    "CSCE 546",
+    "CSCE 390",
+    "MATH 300"
+  ];
+
+  coursesSpring = [
+    "CSCE 330",
+    "PHYS 211",
+    "CHEM 112",
+    "MATH 242",
+    "CSCE 240"
+  ];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popCtrl: PopoverController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyPavedWayPage');
   }
 
+  /*
+   * highlight(id)
+   * This function is used to show the current highlighted year
+   * Based on the id passed into the function, it will highlight
+   * that button as the active button.
+   *
+   * @params id
+   *
+   */
   highlight(id) {
     //booleans to keep track of if an item is highlighted
     var y1H = false;
@@ -34,40 +62,65 @@ export class MyPavedWayPage {
     switch(id) {
       case 'year1':
         if(y1H == false) {
+          //Setting background-color
           document.getElementById(id).style.backgroundColor = dark;
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
+          //Setting text color
+          document.getElementById(id).style.color = primary;
+          document.getElementById('year2').style.color = dark;
+          document.getElementById('year3').style.color = dark;
+          document.getElementById('year4').style.color = dark;
           y1H = true;
         }
         break;
       case 'year2':
         if(y2H == false) {
+          //Setting background-color
           document.getElementById(id).style.backgroundColor = dark;
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
+          //Setting text color
+          document.getElementById(id).style.color = primary;
+          document.getElementById('year1').style.color = dark;
+          document.getElementById('year3').style.color = dark;
+          document.getElementById('year4').style.color = dark;
           y2H = true;
         }
         break;
       case 'year3':
         if(y3H == false) {
+          //Setting background-color
           document.getElementById(id).style.backgroundColor = dark;
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
+          //Setting text color
+          document.getElementById(id).style.color = primary;
+          document.getElementById('year1').style.color = dark;
+          document.getElementById('year2').style.color = dark;
+          document.getElementById('year4').style.color = dark;
           y3H = true;
         }
         break;
       case 'year4':
         if(y4H == false) {
+          //Setting background-color
           document.getElementById(id).style.backgroundColor = dark;
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
+          //Setting text color
+          document.getElementById(id).style.color = primary;
+          document.getElementById('year1').style.color = dark;
+          document.getElementById('year2').style.color = dark;
+          document.getElementById('year3').style.color = dark;
           y4H = true;
         }
         break;
     }
   }
+
 }
