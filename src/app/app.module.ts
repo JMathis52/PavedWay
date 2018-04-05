@@ -3,6 +3,7 @@ import { Pro } from '@ionic/pro';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, Injectable, Injector } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { CalendarPage } from '../pages/calendar/calendar';
@@ -69,6 +70,7 @@ export class MyErrorHandler implements ErrorHandler {
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
+    Geolocation,
     {provide: ErrorHandler, useClass: MyErrorHandler}
   ]
 })

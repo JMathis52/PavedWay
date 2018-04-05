@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, PopoverController } from 'ionic-angular';
-import { } from '@types/googlemaps';
+
+import ( Geolocation, GeolocationOptions, Geoposition, PositionError ) from '@ionic-native/geolocation';
 
 //import { CoursesPage } from '../courses/courses';
 
@@ -11,23 +12,14 @@ import { } from '@types/googlemaps';
  * Ionic pages and navigation.
  */
 
+ declare var google;
+
 @Component({
   selector: 'page-my-paved-way',
   templateUrl: 'my-paved-way.html',
 })
 export class MyPavedWayPage {
 
-  @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
-
-  ngOnInit() {
-    var mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
-  }
 
   semester: string = "fall";
   coursesFall = [
@@ -46,12 +38,49 @@ export class MyPavedWayPage {
     "CSCE 240"
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popCtrl: PopoverController) {
+  options: GeolocationOptions;
+  currentPos: Geoposition;
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popCtrl: PopoverController, private geolocation: Geolocation) {
   }
+
+  getUserPosition() {
+    this.options = {
+      enableHighAccuracy : false;
+    };
+
+    this.geolocation.getCurrentPosition(this.options).then((pos : Geoposition) => {
+      this.currentPos = pos;
+      console.log(pos);
+      this.addMap(pos.coords.latitude, pos.coords.longitude);
+    },(err:PositionError) => {
+      console.log("error :");
+    });
+  }
+
+  addMap(lat, long) {
+    let latLng = new google.maps.LatLng(lat, long);
+
+    let mapOptions = {
+      center:latLng,
+      zoom:15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    //this.addMarker();
+  }
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyPavedWayPage');
+    this.getUserPosition();
   }
+
+
 
   /*
    * highlight(id)
