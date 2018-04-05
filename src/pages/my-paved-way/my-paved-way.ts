@@ -100,6 +100,8 @@ export class MyPavedWayPage {
 
     var primary = '#862633';
     var dark = '#000000';
+    var light = '#f4f4f4';
+
 
     switch(id) {
       case 'year1':
@@ -109,11 +111,6 @@ export class MyPavedWayPage {
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
-          //Setting text color
-          document.getElementById(id).style.color = primary;
-          document.getElementById('year2').style.color = dark;
-          document.getElementById('year3').style.color = dark;
-          document.getElementById('year4').style.color = dark;
           y1H = true;
         }
         break;
@@ -124,11 +121,6 @@ export class MyPavedWayPage {
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
-          //Setting text color
-          document.getElementById(id).style.color = primary;
-          document.getElementById('year1').style.color = dark;
-          document.getElementById('year3').style.color = dark;
-          document.getElementById('year4').style.color = dark;
           y2H = true;
         }
         break;
@@ -139,11 +131,6 @@ export class MyPavedWayPage {
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year4').style.backgroundColor = primary;
-          //Setting text color
-          document.getElementById(id).style.color = primary;
-          document.getElementById('year1').style.color = dark;
-          document.getElementById('year2').style.color = dark;
-          document.getElementById('year4').style.color = dark;
           y3H = true;
         }
         break;
@@ -154,11 +141,6 @@ export class MyPavedWayPage {
           document.getElementById('year1').style.backgroundColor = primary;
           document.getElementById('year2').style.backgroundColor = primary;
           document.getElementById('year3').style.backgroundColor = primary;
-          //Setting text color
-          document.getElementById(id).style.color = primary;
-          document.getElementById('year1').style.color = dark;
-          document.getElementById('year2').style.color = dark;
-          document.getElementById('year3').style.color = dark;
           y4H = true;
         }
         break;
