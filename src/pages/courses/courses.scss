@@ -1,3 +1,23 @@
 page-courses {
 
+  #profHead {
+    float: left;
+    overflow: hidden;
+  }
+
+  #classHead {
+    color: white;
+    // text-align:center;
+    padding-top: 7%;
+  }
+  #classTitle {
+    color: white;
+  }
+  #cardBack {
+    background-color: black;
+  }
+  #niceEdge {
+    border-radius: 5px;
+  }
+
 }

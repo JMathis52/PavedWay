@@ -9,11 +9,112 @@
     <button ion-button color="light" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Courses</ion-title>
+    <ion-title>Current Courses</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+	<!-- create the [(ngModel)] for courses of courses to make a page with all of the courses from current student from database -->
+
+
+  <ion-card id="niceEdge"> 
+  	<ion-item id="cardBack">
+  	  <button ion-button clear icon-start id="profHead">
+  			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
+  			<!-- image of professor??? link to rate my professors -->
+  		<img src="pic of prof" alt="prof">
+  	  </button>
+  	  <h2 id="classTitle">Hu, Jianjun</h2>
+  	  <span id="classTitle">Spring, 2018</span>
+  	</ion-item>
+  	<ion-card-content>
+  		<h2 id="classHead">CSCE 546-001</h2>
+  		<span id="classTitle">Mobile App Development</span>
+  	</ion-card-content>
+  	<ion-row>
+  		<ion-col>
+  			<button ion-button color="primary" clear small icon-start (click)="openComments()">
+  				<!-- Make sure to add {{className}} as variable in comment function -->
+  				<ion-icon name='text'></ion-icon>
+  				Comments/Updates
+  			</button>
+  		</ion-col>
+  	</ion-row>
+  </ion-card>
+
+  <ion-card id="niceEdge"> 
+  	<ion-item id="cardBack">
+  	  <button ion-button clear icon-start id="profHead">
+  			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
+  			<!-- image of professor??? link to rate my professors -->
+  		<img src="pic of prof" alt="prof">
+  	  </button>
+  	  <h2 id="classTitle">Md Islam</h2>
+  	  <span id="classTitle">Spring, 2018</span>
+  	</ion-item>
+  	<ion-card-content>
+  		<h2 id="classHead">ELCT 371-001</h2>
+  		<span id="classTitle">Electronics</span>
+  	</ion-card-content>
+  	<ion-row>
+  		<ion-col>
+  			<button ion-button color="primary" clear small icon-start>
+  				<ion-icon name='text'></ion-icon>
+  				Comments/Updates
+  			</button>
+  		</ion-col>
+  	</ion-row>
+  </ion-card>
+
+
+  <ion-card id="niceEdge"> 
+  	<ion-item id="cardBack">
+  	  <button ion-button clear icon-start id="profHead">
+  			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
+  			<!-- image of professor??? link to rate my professors -->
+  		<img src="pic of prof" alt="prof">
+  	  </button>
+  	  <h2 id="classTitle">Brock, Kevin</h2>
+  	  <span id="classTitle">Spring, 2018</span>
+  	</ion-item>
+  	<ion-card-content>
+  		<h2 id="classHead">ENGL 462-001</h2>
+  		<span id="classTitle">Business Writing</span>
+  	</ion-card-content>
+  	<ion-row>
+  		<ion-col>
+  			<button ion-button color="primary" clear small icon-start>
+  				<ion-icon name='text'></ion-icon>
+  				Comments/Updates
+  			</button>
+  		</ion-col>
+  	</ion-row>
+  </ion-card>
+
+  <ion-card id="niceEdge"> 
+  	<ion-item id="cardBack">
+  	  <button ion-button clear icon-start id="profHead">
+  			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
+  			<!-- image of professor??? link to rate my professors -->
+  		<img src="pic of prof" alt="prof">
+  	  </button>
+  	  <h2 id="classTitle">Shrihari Neladukti</h2>
+  	  <span id="classTitle">Spring, 2018</span>
+  	</ion-item>
+  	<ion-card-content>
+  		<h2 id="classHead">CSCE 416-001</h2>
+  		<span id="classTitle">Computer Networks</span>
+  	</ion-card-content>
+  	<ion-row>
+  		<ion-col>
+  			<button ion-button color="primary" clear small icon-start>
+  				<ion-icon name='text'></ion-icon>
+  				Comments/Updates
+  			</button>
+  		</ion-col>
+  	</ion-row>
+  </ion-card>
+
 
 </ion-content>

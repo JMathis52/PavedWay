@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { CommentsPage } from '../comments/comments';
+
 /**
  * Generated class for the CoursesPage page.
  *
@@ -19,6 +21,10 @@ export class CoursesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoursesPage');
+  }
+
+  openComments() {
+    this.navCtrl.push(CommentsPage);
   }
 
 }
