@@ -13,6 +13,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { CareerPage } from '../pages/career/career';
 import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 import { MapPage } from '../pages/map/map';
+import { CommentsPage } from '../pages/comments/comments';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -50,7 +51,8 @@ export class MyErrorHandler implements ErrorHandler {
     ProfilePage,
     CareerPage,
     MyPavedWayPage,
-    MapPage
+    MapPage,
+    CommentsPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ export class MyErrorHandler implements ErrorHandler {
     ProfilePage,
     CareerPage,
     MyPavedWayPage,
-    MapPage
+    MapPage,
+    CommentsPage
   ],
   providers: [
     StatusBar,
