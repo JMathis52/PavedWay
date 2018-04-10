@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { } from '@types/googlemaps';
 
@@ -17,16 +17,8 @@ import { } from '@types/googlemaps';
 })
 export class MyPavedWayPage {
 
-  @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
 
   ngOnInit() {
-    var mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
   }
 
   semester: string = "fall";
