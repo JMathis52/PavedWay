@@ -3,7 +3,6 @@ import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { } from '@types/googlemaps';
 
 //import { CoursesPage } from '../courses/courses';
-
 /**
  * Generated class for the MyPavedWayPage page.
  *
