@@ -16,6 +16,7 @@ import { MapPage } from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Data } from '../providers/data';
 
 Pro.init('7e171f6b', {
   appVersion: '0.0.1'
@@ -72,7 +73,8 @@ export class MyErrorHandler implements ErrorHandler {
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
-    {provide: ErrorHandler, useClass: MyErrorHandler}
+    {provide: ErrorHandler, useClass: MyErrorHandler},
+    Data
   ]
 })
 export class AppModule {}
