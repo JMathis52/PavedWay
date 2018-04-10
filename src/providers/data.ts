@@ -13,9 +13,13 @@ export class Data {
 
   //Course variables
   courseName;
+  courseID;
   courseLocName;
   courseLocation;
-  courseCreator;
+  courseProf;
+  courseSem;
+  courseYear;
+
 
   //Events variables
   eventsName;
@@ -49,9 +53,12 @@ export class Data {
       for (var i = courses.length - 1; i >= 0; i--) {
          var myCourse = {
            courseName:courses[i].get("name"),
+           courseID:courses[i].get("CourseID"),
            courseLocName:courses[i].get("locationName"),
            courseLocation:courses[i].get("location"),
-           courseCreator:courses[i].get("courseCreator"),
+           courseProf:courses[i].get("professor"),
+           courseSem:courses[i].get("semester"),
+           courseYear:courses[i].get("year")
          }
          items.push(myCourse);
       }
