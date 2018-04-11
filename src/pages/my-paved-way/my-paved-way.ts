@@ -68,13 +68,13 @@ export class MyPavedWayPage {
     }
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() {this.semester = "fall";
     console.log('ionViewDidLoad MyPavedWayPage');
   }
 
   /*
    * highlight(id)
-   * This function is used to show the current highlighted year
+   * This function is used to show the curthis.semester = "fall";rent highlighted year
    * Based on the id passed into the function, it will highlight
    * that button as the active button.
    *
@@ -85,7 +85,7 @@ export class MyPavedWayPage {
     //booleans to keep track of if an item is highlighted
     var y1H = false;
     var y2H = false;
-    var y3H = false;
+    var y3H = false;this.semester = "fall";
     var y4H = false;
 
     var primary = '#862633';
@@ -97,45 +97,49 @@ export class MyPavedWayPage {
       case 'year1':
         if(y1H == false) {
           //Setting background-color
-          document.getElementById(id).style.backgroundColor = dark;
-          document.getElementById('year2').style.backgroundColor = primary;
-          document.getElementById('year3').style.backgroundColor = primary;
-          document.getElementById('year4').style.backgroundColor = primary;
+          document.getElementById(id).style.backgroundColor = primary;
+          document.getElementById('year2').style.backgroundColor = dark;
+          document.getElementById('year3').style.backgroundColor = dark;
+          document.getElementById('year4').style.backgroundColor = dark;
           y1H = true;
           this.currentYear = 1;
+          this.semester = "fall";
         }
         break;
       case 'year2':
         if(y2H == false) {
           //Setting background-color
-          document.getElementById(id).style.backgroundColor = dark;
-          document.getElementById('year1').style.backgroundColor = primary;
-          document.getElementById('year3').style.backgroundColor = primary;
-          document.getElementById('year4').style.backgroundColor = primary;
+          document.getElementById(id).style.backgroundColor = primary;
+          document.getElementById('year1').style.backgroundColor = dark;
+          document.getElementById('year3').style.backgroundColor = dark;
+          document.getElementById('year4').style.backgroundColor = dark;
           y2H = true;
           this.currentYear = 2;
+          this.semester = "fall";
         }
         break;
       case 'year3':
         if(y3H == false) {
           //Setting background-color
-          document.getElementById(id).style.backgroundColor = dark;
-          document.getElementById('year1').style.backgroundColor = primary;
-          document.getElementById('year2').style.backgroundColor = primary;
-          document.getElementById('year4').style.backgroundColor = primary;
+          document.getElementById(id).style.backgroundColor = primary;
+          document.getElementById('year1').style.backgroundColor = dark;
+          document.getElementById('year2').style.backgroundColor = dark;
+          document.getElementById('year4').style.backgroundColor = dark;
           y3H = true;
           this.currentYear = 3;
+          this.semester = "fall";
         }
         break;
       case 'year4':
         if(y4H == false) {
           //Setting background-color
-          document.getElementById(id).style.backgroundColor = dark;
-          document.getElementById('year1').style.backgroundColor = primary;
-          document.getElementById('year2').style.backgroundColor = primary;
-          document.getElementById('year3').style.backgroundColor = primary;
+          document.getElementById(id).style.backgroundColor = primary;
+          document.getElementById('year1').style.backgroundColor = dark;
+          document.getElementById('year2').style.backgroundColor = dark;
+          document.getElementById('year3').style.backgroundColor = dark;
           y4H = true;
           this.currentYear = 4;
+          this.semester = "fall";
         }
         break;
     }
