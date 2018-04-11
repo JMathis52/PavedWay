@@ -47,9 +47,6 @@ export class Data {
     query.limit(1000);
     var items=[];
     query.find().then((courses) => {
-      // resolve(menus);
-      console.log(courses.length);
-
       for (var i = courses.length - 1; i >= 0; i--) {
          var myCourse = {
            courseName:courses[i].get("name"),
@@ -75,9 +72,6 @@ export class Data {
     query.limit(1000);
     var items=[];
     query.find().then((eve) => {
-      // resolve(menus);
-      console.log(eve.length);
-
       for (var i = eve.length - 1; i >= 0; i--) {
          var myEvents = {
            eventsName:eve[i].get("name"),
@@ -143,9 +137,6 @@ export class Data {
     query.limit(1000);
     var items=[];
     query.find().then((courses) => {
-      // resolve(menus);
-      console.log(courses.length);
-
       for (var i = courses.length - 1; i >= 0; i--) {
         if((courses[i].get("semester") == "Fall") && (courses[i].get("year") == year)) {
           var myCourse = {
@@ -173,9 +164,6 @@ export class Data {
     query.limit(1000);
     var items=[];
     query.find().then((courses) => {
-      // resolve(menus);
-      console.log(courses.length);
-
       for (var i = courses.length - 1; i >= 0; i--) {
         if((courses[i].get("semester") == "Spring") && (courses[i].get("year") == year)) {
           var myCourse = {
