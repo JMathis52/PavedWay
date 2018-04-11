@@ -18,10 +18,9 @@ import { Data } from '../../providers/data';
 export class MapPage {
 
   courses = [];
-  markers = [];
 
   ngOnInit() {
-    this.initMap();
+
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: Data) {
@@ -30,6 +29,8 @@ export class MapPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MapPage');
+    this.initMap();
+    console.log(this.courses);
   }
 
   initMap() {
@@ -38,6 +39,14 @@ export class MapPage {
       zoom: 15,
       center: usc
     });
+    for(course in this.courses) {
+      var marker = new google.maps.Marker({
+        position: course.courseLocation,
+        title: course.courseID,
+        map: map
+      });
+    }
   }
+
 
 }
