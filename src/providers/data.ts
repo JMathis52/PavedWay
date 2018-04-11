@@ -62,7 +62,6 @@ export class Data {
          }
          items.push(myCourse);
       }
-      console.log(items.length);
     }, (error) => {
       // reject(error);
       console.log("error");
@@ -89,7 +88,6 @@ export class Data {
          }
          items.push(myEvents);
       }
-      console.log(items.length);
     }, (error) => {
       // reject(error);
       console.log("error");
@@ -137,6 +135,66 @@ export class Data {
         alert('Failed to create new object, with error code: ' + error.code + " " + error.message);
       }
     });
+  }
+
+  getCoursesFall(year) {
+    const Course = Parse.Object.extend('Course');
+    let query = new Parse.Query(Course);
+    query.limit(1000);
+    var items=[];
+    query.find().then((courses) => {
+      // resolve(menus);
+      console.log(courses.length);
+
+      for (var i = courses.length - 1; i >= 0; i--) {
+        if((courses[i].get("semester") == "Fall") && (courses[i].get("year") == year)) {
+          var myCourse = {
+            courseName:courses[i].get("name"),
+            courseID:courses[i].get("CourseID"),
+            courseLocName:courses[i].get("locationName"),
+            courseLocation:courses[i].get("location"),
+            courseProf:courses[i].get("professor"),
+            courseSem:courses[i].get("semester"),
+            courseYear:courses[i].get("year")
+          }
+          items.push(myCourse);
+        }
+      }
+    }, (error) => {
+      // reject(error);
+      console.log("error");
+    });
+    return items;
+  }
+
+  getCoursesSpring(year) {
+    const Course = Parse.Object.extend('Course');
+    let query = new Parse.Query(Course);
+    query.limit(1000);
+    var items=[];
+    query.find().then((courses) => {
+      // resolve(menus);
+      console.log(courses.length);
+
+      for (var i = courses.length - 1; i >= 0; i--) {
+        if((courses[i].get("semester") == "Spring") && (courses[i].get("year") == year)) {
+          var myCourse = {
+            courseName:courses[i].get("name"),
+            courseID:courses[i].get("CourseID"),
+            courseLocName:courses[i].get("locationName"),
+            courseLocation:courses[i].get("location"),
+            courseProf:courses[i].get("professor"),
+            courseSem:courses[i].get("semester"),
+            courseYear:courses[i].get("year")
+          }
+          items.push(myCourse);
+        }
+      }
+    }, (error) => {
+      // reject(error);
+      console.log("error");
+    });
+    return items;
   }
 
 }
