@@ -27,23 +27,23 @@
       <ion-card-header>
         <ion-segment [(ngModel)]="semester">
           <ion-segment-button value="fall">
-            Fall 2018
+            Fall {{years[currentYear].Fall}}
           </ion-segment-button>
           <ion-segment-button value="spring">
-            Spring 2019
+            Spring {{years[currentYear].Spring}}
           </ion-segment-button>
         </ion-segment>
       </ion-card-header>
 
       <ion-card-content [ngSwitch]="semester">
         <div *ngSwitchCase="'fall'">
-          <ion-list no-lines *ngFor="let course of coursesFall">
-            {{course}}
+          <ion-list no-lines *ngFor="let course of coursesFall[currentYear]">
+            {{course.courseID}}
           </ion-list>
         </div>
         <div *ngSwitchCase="'spring'">
-          <ion-list no-lines *ngFor="let course of coursesSpring">
-            {{course}}
+          <ion-list no-lines *ngFor="let course of coursesSpring[currentYear]">
+            {{course.courseID}}
           </ion-list>
         </div>
       </ion-card-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { } from '@types/googlemaps';
+import { Data } from '../../providers/data';
 
 /**
  * Generated class for the MapPage page.
@@ -16,13 +17,15 @@ import { } from '@types/googlemaps';
 })
 export class MapPage {
 
-
+  courses = [];
+  markers = [];
 
   ngOnInit() {
     this.initMap();
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: Data) {
+    this.courses = this.dataService.getDataCourse();
   }
 
   ionViewDidLoad() {
@@ -30,14 +33,10 @@ export class MapPage {
   }
 
   initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
+    var usc = {lat: 33.9961, lng: -81.0274};
     var map = new google.maps.Map(document.getElementById('googleMap'), {
       zoom: 15,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
+      center: usc
     });
   }
 
