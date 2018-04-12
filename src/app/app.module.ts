@@ -5,19 +5,23 @@ import { ErrorHandler, NgModule, Injectable, Injector } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { CalendarPage } from '../pages/calendar/calendar';
+//import { CalendarPage } from '../pages/calendar/calendar';
 import { CoursesPage } from '../pages/courses/courses';
 import { ExtrasPage } from '../pages/extras/extras';
-import { GroupsPage } from '../pages/groups/groups';
+//import { GroupsPage } from '../pages/groups/groups';
 import { ProfilePage } from '../pages/profile/profile';
-import { CareerPage } from '../pages/career/career';
+//import { CareerPage } from '../pages/career/career';
 import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 import { MapPage } from '../pages/map/map';
 import { CommentsPage } from '../pages/comments/comments';
+import { ProfileDetailPage } from '../pages/profile-detail/profile-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Data } from '../providers/data';
+
+//Social Logins
+import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angular5-social-login';
 
 Pro.init('7e171f6b', {
   appVersion: '0.0.1'
@@ -42,42 +46,56 @@ export class MyErrorHandler implements ErrorHandler {
   }
 }
 
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig([
+    {
+      id: FacebookLoginProvider.PROVIDER_ID,
+      provider: new FacebookLoginProvider("594578054240923")
+    }
+  ]);
+  return config;
+}
+
 @NgModule({
   declarations: [
     MyApp,
-    CalendarPage,
+    //CalendarPage,
     CoursesPage,
     ExtrasPage,
-    GroupsPage,
+    //GroupsPage,
     ProfilePage,
-    CareerPage,
+    //CareerPage,
     MyPavedWayPage,
     MapPage,
-    CommentsPage
+    CommentsPage,
+    ProfileDetailPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    SocialLoginModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CalendarPage,
+    //CalendarPage,
     CoursesPage,
     ExtrasPage,
-    GroupsPage,
+    //GroupsPage,
     ProfilePage,
-    CareerPage,
+    //CareerPage,
     MyPavedWayPage,
     MapPage,
-    CommentsPage
+    CommentsPage,
+    ProfileDetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
     {provide: ErrorHandler, useClass: MyErrorHandler},
-    Data
+    Data,
+    { provide: AuthServiceConfig, useFactory: getAuthServiceConfigs },
   ]
 })
 export class AppModule {}
