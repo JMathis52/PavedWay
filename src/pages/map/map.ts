@@ -39,6 +39,7 @@ export class MapPage {
       zoom: 15,
       center: usc
     });
+    var course;
     for(course in this.courses) {
       var marker = new google.maps.Marker({
         position: course.courseLocation,
