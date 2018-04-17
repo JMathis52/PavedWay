@@ -86,4 +86,10 @@
         <variable name="CHANNEL_NAME" value="Master" />
         <variable name="UPDATE_METHOD" value="background" />
     </plugin>
+    <plugin name="cordova-plugin-facebook4" spec="~1.9.1">
+        <variable name="APP_ID" value="594578054240923" />
+        <variable name="APP_NAME" value="pavedWay" />
+    </plugin>
+    <engine name="android" spec="7.0.0" />
+    <widget id="com.pavedway" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 </widget>

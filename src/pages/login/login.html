@@ -15,4 +15,29 @@
 
 <ion-content padding>
 
+  Stanley Sierputowski
+  <p class="logo">
+    <!-- <img src="http://placehold.it/300x200"/> -->
+    <img src="http://webneel.com/sites/default/files/images/project/Restaurant%20hotel%20logo%20(29).png" alt="Stanley's Restaruant"/>
+  </p>
+
+  <form (submit)="doSignin()">
+    <ion-list inset padding>
+
+      <ion-item>
+        <ion-label stacked>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+      
+      <div padding>
+        <button ion-button color="accent" block>Login</button>
+        <p style="text-align: center">Don't you have an acccount? <a [navPush]="registerPage">Signup</a></p>
+      </div>
+
+    </ion-list>
+    </form>
 </ion-content>
