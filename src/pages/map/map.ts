@@ -26,7 +26,6 @@ export class MapPage {
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: Data) {
-    this.courses = this.dataService.getDataCourse();
   }
 
   ionViewDidLoad() {
