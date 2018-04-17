@@ -28,6 +28,7 @@
     "@ionic/pro": "^1.0.20",
     "@ionic/storage": "2.1.3",
     "@types/googlemaps": "^3.30.8",
+    "angular5-social-login": "^1.0.9",
     "bootstrap": "^3.3.7",
     "cordova-android": "7.0.0",
     "cordova-plugin-ionic": "^4.1.3",

@@ -90,8 +90,6 @@ export class MyPavedWayPage {
 
     var primary = '#862633';
     var dark = '#000000';
-    var light = '#f4f4f4';
-
 
     switch(id) {
       case 'year1':
