@@ -23,6 +23,7 @@ export class MyPavedWayPage {
   }
 
   semester: string = "fall";
+  extras: string = 'events';
 
   coursesFall = {
     1 : [],
@@ -89,16 +90,21 @@ export class MyPavedWayPage {
     var y4H = false;
 
     var primary = '#862633';
-    var dark = '#000000';
+    var light = '#f4f4f4';
 
     switch(id) {
       case 'year1':
         if(y1H == false) {
           //Setting background-color
           document.getElementById(id).style.backgroundColor = primary;
-          document.getElementById('year2').style.backgroundColor = dark;
-          document.getElementById('year3').style.backgroundColor = dark;
-          document.getElementById('year4').style.backgroundColor = dark;
+          document.getElementById('year2').style.backgroundColor = light;
+          document.getElementById('year3').style.backgroundColor = light;
+          document.getElementById('year4').style.backgroundColor = light;
+          //Setting text-color
+          document.getElementById(id).style.color = light;
+          document.getElementById('year2').style.color = primary;
+          document.getElementById('year3').style.color = primary;
+          document.getElementById('year4').style.color = primary;
           y1H = true;
           this.currentYear = 1;
           this.semester = "fall";
@@ -108,9 +114,14 @@ export class MyPavedWayPage {
         if(y2H == false) {
           //Setting background-color
           document.getElementById(id).style.backgroundColor = primary;
-          document.getElementById('year1').style.backgroundColor = dark;
-          document.getElementById('year3').style.backgroundColor = dark;
-          document.getElementById('year4').style.backgroundColor = dark;
+          document.getElementById('year1').style.backgroundColor = light;
+          document.getElementById('year3').style.backgroundColor = light;
+          document.getElementById('year4').style.backgroundColor = light;
+          //Setting text-color
+          document.getElementById(id).style.color = light;
+          document.getElementById('year1').style.color = primary;
+          document.getElementById('year3').style.color = primary;
+          document.getElementById('year4').style.color = primary;
           y2H = true;
           this.currentYear = 2;
           this.semester = "fall";
@@ -120,9 +131,14 @@ export class MyPavedWayPage {
         if(y3H == false) {
           //Setting background-color
           document.getElementById(id).style.backgroundColor = primary;
-          document.getElementById('year1').style.backgroundColor = dark;
-          document.getElementById('year2').style.backgroundColor = dark;
-          document.getElementById('year4').style.backgroundColor = dark;
+          document.getElementById('year1').style.backgroundColor = light;
+          document.getElementById('year2').style.backgroundColor = light;
+          document.getElementById('year4').style.backgroundColor = light;
+          //Setting text-color
+          document.getElementById(id).style.color = light;
+          document.getElementById('year1').style.color = primary;
+          document.getElementById('year2').style.color = primary;
+          document.getElementById('year4').style.color = primary;
           y3H = true;
           this.currentYear = 3;
           this.semester = "fall";
@@ -132,9 +148,14 @@ export class MyPavedWayPage {
         if(y4H == false) {
           //Setting background-color
           document.getElementById(id).style.backgroundColor = primary;
-          document.getElementById('year1').style.backgroundColor = dark;
-          document.getElementById('year2').style.backgroundColor = dark;
-          document.getElementById('year3').style.backgroundColor = dark;
+          document.getElementById('year1').style.backgroundColor = light;
+          document.getElementById('year2').style.backgroundColor = light;
+          document.getElementById('year3').style.backgroundColor = light;
+          //Setting text-color
+          document.getElementById(id).style.color = light;
+          document.getElementById('year1').style.color = primary;
+          document.getElementById('year2').style.color = primary;
+          document.getElementById('year3').style.color = primary;
           y4H = true;
           this.currentYear = 4;
           this.semester = "fall";

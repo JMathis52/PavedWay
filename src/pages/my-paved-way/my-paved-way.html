@@ -25,7 +25,7 @@
   <div class="row" id="courses">
     <ion-card>
       <ion-card-header>
-        <ion-segment [(ngModel)]="semester">
+        <ion-segment [(ngModel)]="semester" color="primary">
           <ion-segment-button value="fall">
             Fall {{years[currentYear].Fall}}
           </ion-segment-button>
@@ -50,5 +50,34 @@
     </ion-card>
   </div>
   <!--Courses Card END-->
+  <!--Events Card-->
+  <div class="row" id="events">
+    <ion-card>
+      <ion-card-header>
+        <ion-segment [(ngModel)]="extras" color="primary">
+          <ion-segment-button value="events">
+            Events
+          </ion-segment-button>
+          <ion-segment-button value="careers">
+            Careers
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-header>
+
+      <ion-card-content [ngSwitch]="semester">
+        <div *ngSwitchCase="'events'">
+          <ion-list no-lines>
+
+          </ion-list>
+        </div>
+        <div *ngSwitchCase="'careers'">
+          <ion-list no-lines>
+
+          </ion-list>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!--Events Card END-->
   <div class="row" id="gMap" #gmap></div>
 </ion-content>
