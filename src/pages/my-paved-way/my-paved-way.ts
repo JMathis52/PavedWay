@@ -23,7 +23,7 @@ export class MyPavedWayPage {
   }
 
   semester: string = "fall";
-  extras: string = 'events';
+  extra: string = 'events';
 
   coursesFall = {
     1 : [],
@@ -59,6 +59,8 @@ export class MyPavedWayPage {
 
   currentYear = 1;
 
+  extras = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public popCtrl: PopoverController, public dataService: Data) {
     var i;
     for(i = 0; i < 4; i++) {
@@ -67,6 +69,7 @@ export class MyPavedWayPage {
     for(i = 0; i < 4; i++) {
       this.coursesSpring[i+1] = this.dataService.getCoursesSpring(this.years[i+1].Spring);
     }
+    this.extras = this.dataService.getDataEvents();
   }
 
   ionViewDidLoad() {this.semester = "fall";
