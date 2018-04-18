@@ -17,6 +17,7 @@ import { CommentsPage } from '../pages/comments/comments';
 import { ProfileDetailPage } from '../pages/profile-detail/profile-detail';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { AddEventPage } from '../pages/add-event/add-event';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -63,7 +64,8 @@ export class MyErrorHandler implements ErrorHandler {
     CommentsPage,
     LoginPage,
     RegisterPage,
-    ProfileDetailPage
+    ProfileDetailPage,
+    AddEventPage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ export class MyErrorHandler implements ErrorHandler {
     CommentsPage,
     LoginPage,
     RegisterPage,
-    ProfileDetailPage
+    ProfileDetailPage,
+    AddEventPage
   ],
   providers: [
     StatusBar,
