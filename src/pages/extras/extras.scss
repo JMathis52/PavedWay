@@ -1,3 +1,38 @@
 page-extras {
 
+  #profHead {
+    float: left;
+    overflow: hidden;
+  }
+
+  #classHead {
+    color: white;
+    // text-align:center;
+
+  }
+  #classTitle {
+    padding-top: 7%;
+    color: white;
+  }
+  #cardBack {
+    background-color: black;
+  }
+  #niceEdge {
+    border-radius: 5px;
+  }
+
+  #eventsTags {
+    color: white;
+    size: 6pt;
+
+  }
+
+  hr {
+    border: none;
+    height: 5px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
 }
