@@ -6,8 +6,6 @@ import { ProfilePage } from '../profile/profile';
 import { MyPavedWayPage } from '../my-paved-way/my-paved-way';
 import { Parse } from 'parse';
 
-import { Data } from '../../providers/data';
-
 /**
  * Generated class for the LoginPage page.
  *

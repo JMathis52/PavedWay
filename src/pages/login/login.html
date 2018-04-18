@@ -10,13 +10,13 @@
 <ion-content padding id="login">
   <img id="logo" src="../assets/imgs/headerLogo.png">
   <form (submit)="doSignin()">
-    <ion-list>
+    <ion-list no-lines>
       <ion-item id="login">
-        <ion-label floating>Username</ion-label>
+        <ion-label stacked>Username</ion-label>
         <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
       </ion-item>
       <ion-item id="login">
-        <ion-label floating>Password</ion-label>
+        <ion-label stacked>Password</ion-label>
         <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
       </ion-item>
 
