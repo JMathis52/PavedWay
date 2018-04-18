@@ -54,7 +54,7 @@
   <div class="row" id="events">
     <ion-card>
       <ion-card-header>
-        <ion-segment [(ngModel)]="extras" color="primary">
+        <ion-segment [(ngModel)]="extra" color="primary">
           <ion-segment-button value="events">
             Events
           </ion-segment-button>
@@ -64,10 +64,10 @@
         </ion-segment>
       </ion-card-header>
 
-      <ion-card-content [ngSwitch]="semester">
+      <ion-card-content [ngSwitch]="extra">
         <div *ngSwitchCase="'events'">
-          <ion-list no-lines>
-
+          <ion-list no-lines *ngFor="let extra of extras">
+            {{extra.eventsName}}
           </ion-list>
         </div>
         <div *ngSwitchCase="'careers'">
