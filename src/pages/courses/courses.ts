@@ -21,11 +21,6 @@ export class CoursesPage {
   courses = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataService: Data, public events: Events) {
-    this.getCourses();
-
-  }
-
-  getCourses() {
     this.courses = this.dataService.getDataCourse();
   }
 

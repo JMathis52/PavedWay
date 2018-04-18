@@ -7,7 +7,6 @@ import { CoursesPage } from '../pages/courses/courses';
 import { ExtrasPage } from '../pages/extras/extras';
 import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 import { MapPage } from '../pages/map/map';
-import { LoginPage } from '../pages/login/login';
 import { ProfileDetailPage } from '../pages/profile-detail/profile-detail';
 
 @Component({
@@ -16,7 +15,7 @@ import { ProfileDetailPage } from '../pages/profile-detail/profile-detail';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = MyPavedWayPage;
 
   pages: Array<{title: string, component: any}>;
 

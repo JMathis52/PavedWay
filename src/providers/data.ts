@@ -26,7 +26,13 @@ export class Data {
   eventsDate;
   eventsLocName;
   eventsLocation;
+  eventsLat;
+  eventsLong;
   eventsCreator;
+  eventsDesc;
+  eventsTag1;
+  eventsTag2;
+  eventsTag3;
 
   //ParseDB info
   private parseAppId: string = '5bQx4LafA7p6c2U07077xKzM4o5wjJ7dKfz1TvEl';
@@ -78,7 +84,13 @@ export class Data {
            eventsDate:eve[i].get("date"),
            eventsLocName:eve[i].get("locationName"),
            eventsLocation:eve[i].get("location"),
+           eventsLat:eve[i].get("eventsLat"),
+           eventsLong:eve[i].get("eventsLong"),
            eventsCreator:eve[i].get("eventCreator"),
+           eventsDesc:eve[i].get("description"),
+           eventsTag1:eve[i].get("tag1"),
+           eventsTag2:eve[i].get("tag2"),
+           eventsTag3:eve[i].get("tag3"),
          }
          items.push(myEvents);
       }
