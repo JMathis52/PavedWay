@@ -18,22 +18,12 @@ ion-content {
 }
 
 #year2, #year3, #year4 {
-  color: color($colors, primary);
-  background-color: color($colors, light);
+  color: color($colors, light);
+  background-color: color($colors, dark);
 }
 
-#courses, #events {
+#courses {
   margin-top: 5%;
-  ion-card {
-    border-radius: 5%;
-    background: none;
-  }
-  ion-segment {
-    background-color: color($colors, light);
-  }
-  ion-card-header {
-    background-color: color($colors, light);
-  }
 }
 
 #fall, #spring {
