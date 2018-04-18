@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { RegisterPage } from '../register/register';
 import { ProfilePage } from '../profile/profile';
+import { MyPavedWayPage } from '../my-paved-way/my-paved-way';
 import { Parse } from 'parse';
 
 import { Data } from '../../providers/data';
@@ -57,16 +58,17 @@ export class LoginPage {
   }
 
   public doSignin() {
-    var self=this;
-    Parse.User.logIn(this.username, this.password, {
-      success: function(user) {
-      console.log("logged in "+user.get("username"));
-      self.navCtrl.setRoot(ProfilePage);
-      },
-      error: function(user, error) {
-      // The login failed. Check error to see why.
-      }
-    });
+    // var self=this;
+    // Parse.User.logIn(this.username, this.password, {
+    //   success: function(user) {
+    //   console.log("logged in "+user.get("username"));
+    //   self.navCtrl.setRoot(ProfilePage);
+    //   },
+    //   error: function(user, error) {
+    //   // The login failed. Check error to see why.
+    //   }
+    // });
+    this.navCtrl.setRoot(MyPavedWayPage);
   }
 
 }

@@ -34,7 +34,7 @@ export class ExtrasPage {
   }
 
 
-    addEvent(){
+  addEvent() {
   	this.navCtrl.push(AddEventPage);
   }
 

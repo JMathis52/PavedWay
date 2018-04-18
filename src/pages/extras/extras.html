@@ -16,40 +16,39 @@
   	<!-- create the [(ngModel)] for courses of courses to make a page with all of the courses from current student from database -->
 
 
-    <ion-card id="niceEdge" *ngFor="let extras of extras">
+    <ion-card id="niceEdge" *ngFor="let extra of extras">
     	<ion-item id="cardBack">
     	  <!-- <button ion-button clear icon-start id="profHead"> -->
     			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
     			<!-- image of professor??? link to rate my professors -->
     		<!-- <img src="pic of prof" alt="prof"> -->
     	  <!-- </button> -->
-    	  <h1 id="classTitle">{{extras.eventsName}}</h1>
+    	  <h1 id="classTitle">{{extra.eventsName}}</h1>
     	</ion-item>
     	<ion-card-content>
-        <hr>
 
-        <h2 id="classHead">Who: {{extras.eventsCreator}}</h2>
-
-        <hr>
-
-    		<h2 id="classTitle">Where: {{extras.eventsLocName}}</h2>
+        <h2 id="classHead">Who: {{extra.eventsCreator}}</h2>
 
         <hr>
 
-    		<h2 id="classHead">When: {{extras.eventsDate}}</h2>
+    		<h2 id="classDetail">Where: {{extra.eventsLocName}}</h2>
+
+        <hr>
+
+    		<h2 id="classDetail">When: {{extra.eventsDate}}</h2>
 
         <hr>
 
 
-        <h2 id="classHead">{{extras.eventsDesc}}</h2>
+        <h2 id="classDetail">Description: {{extra.eventsDesc}}</h2>
 
         <hr>
 
-        <h2 id="classHead">Major: {{extras.eventsTag3}}</h2>
+        <h2 id="classDetail">Major: {{extra.eventsTag3}}</h2>
 
         <hr>
 
-        <h3 id="eventsTags">Tags: {{extras.eventsTag1}} | {{extras.eventsTag2}} </h3>
+        <h3 id="eventsTags">Tags: {{extra.eventsTag1}} | {{extra.eventsTag2}} </h3>
     	</ion-card-content>
     	<ion-row>
     		<ion-col>
