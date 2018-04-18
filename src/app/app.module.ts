@@ -15,13 +15,15 @@ import { MyPavedWayPage } from '../pages/my-paved-way/my-paved-way';
 import { MapPage } from '../pages/map/map';
 import { CommentsPage } from '../pages/comments/comments';
 import { ProfileDetailPage } from '../pages/profile-detail/profile-detail';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Data } from '../providers/data';
 
 //Social Logins
-import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angular5-social-login';
+import { Facebook } from '@ionic-native/facebook';
 
 Pro.init('7e171f6b', {
   appVersion: '0.0.1'
@@ -46,15 +48,6 @@ export class MyErrorHandler implements ErrorHandler {
   }
 }
 
-export function getAuthServiceConfigs() {
-  let config = new AuthServiceConfig([
-    {
-      id: FacebookLoginProvider.PROVIDER_ID,
-      provider: new FacebookLoginProvider("594578054240923")
-    }
-  ]);
-  return config;
-}
 
 @NgModule({
   declarations: [
@@ -68,12 +61,14 @@ export function getAuthServiceConfigs() {
     MyPavedWayPage,
     MapPage,
     CommentsPage,
+    LoginPage,
+    RegisterPage,
     ProfileDetailPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    SocialLoginModule
+    //SocialLoginModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -87,15 +82,18 @@ export function getAuthServiceConfigs() {
     MyPavedWayPage,
     MapPage,
     CommentsPage,
+    LoginPage,
+    RegisterPage,
     ProfileDetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
+    Facebook,
     {provide: ErrorHandler, useClass: MyErrorHandler},
     Data,
-    { provide: AuthServiceConfig, useFactory: getAuthServiceConfigs },
+    //{ provide: AuthServiceConfig, useFactory: getAuthServiceConfigs },
   ]
 })
 export class AppModule {}
