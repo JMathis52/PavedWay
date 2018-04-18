@@ -1,16 +1,11 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <img id="profPic" src="../assets/imgs/ProfilePic.jpg">
-      <h6>Jerrod Mathis</h6>
-      <p>Computer Science</p>
-      <p>jmathis@email.sc.edu</p>
-    </ion-toolbar>
+    <page-profile></page-profile>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button id="pages" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>

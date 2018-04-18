@@ -1,13 +1,12 @@
 <!--
   Generated template for the MyPavedWayPage page.
-
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color="primary">
+    <button ion-button color="light" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>My Paved Way</ion-title>
@@ -16,5 +15,69 @@
 
 
 <ion-content padding>
+  <!--Courses Card-->
+  <div class="row">
+    <button ion-button class="btn" id="year1" (click)="highlight('year1')">Year 1</button>
+    <button ion-button class="btn" id="year2" (click)="highlight('year2')">Year 2</button>
+    <button ion-button class="btn" id="year3" (click)="highlight('year3')">Year 3</button>
+    <button ion-button class="btn" id="year4" (click)="highlight('year4')">Year 4</button>
+  </div>
+  <div class="row" id="courses">
+    <ion-card>
+      <ion-card-header>
+        <ion-segment [(ngModel)]="semester" color="primary">
+          <ion-segment-button value="fall">
+            Fall {{years[currentYear].Fall}}
+          </ion-segment-button>
+          <ion-segment-button value="spring">
+            Spring {{years[currentYear].Spring}}
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-header>
 
+      <ion-card-content [ngSwitch]="semester">
+        <div *ngSwitchCase="'fall'">
+          <ion-list no-lines *ngFor="let course of coursesFall[currentYear]">
+            {{course.courseID}}
+          </ion-list>
+        </div>
+        <div *ngSwitchCase="'spring'">
+          <ion-list no-lines *ngFor="let course of coursesSpring[currentYear]">
+            {{course.courseID}}
+          </ion-list>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!--Courses Card END-->
+  <!--Events Card-->
+  <div class="row" id="events">
+    <ion-card>
+      <ion-card-header>
+        <ion-segment [(ngModel)]="extras" color="primary">
+          <ion-segment-button value="events">
+            Events
+          </ion-segment-button>
+          <ion-segment-button value="careers">
+            Careers
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-header>
+
+      <ion-card-content [ngSwitch]="semester">
+        <div *ngSwitchCase="'events'">
+          <ion-list no-lines>
+
+          </ion-list>
+        </div>
+        <div *ngSwitchCase="'careers'">
+          <ion-list no-lines>
+
+          </ion-list>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!--Events Card END-->
+  <div class="row" id="gMap" #gmap></div>
 </ion-content>

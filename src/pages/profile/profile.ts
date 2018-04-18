@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the ProfilePage page.
@@ -14,7 +13,11 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  name: string = "Jerrod Mathis";
+  major: string = "Computer Science";
+  email: string = "jmathis@email.sc.edu";
+  
+  constructor() {
   }
 
   ionViewDidLoad() {

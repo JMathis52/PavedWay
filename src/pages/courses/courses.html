@@ -5,14 +5,42 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>courses</ion-title>
+  <ion-navbar color="primary">
+    <button ion-button color="light" menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Current Courses</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+	<!-- create the [(ngModel)] for courses of courses to make a page with all of the courses from current student from database -->
+
+
+  <ion-card id="niceEdge" *ngFor="let course of courses">
+  	<ion-item id="cardBack">
+  	  <!-- <button ion-button clear icon-start id="profHead"> -->
+  			<!-- (click)=search rmp for {{prof name}}  or something along the lines.. if not can remove button from this image -->
+  			<!-- image of professor??? link to rate my professors -->
+  		<!-- <img src="pic of prof" alt="prof"> -->
+  	  <!-- </button> -->
+  	  <h2 id="classTitle">{{course.courseProf}}</h2>
+  	  <span id="classTitle">{{course.courseSem}} {{course.courseYear}}</span>
+  	</ion-item>
+  	<ion-card-content>
+  		<h2 id="classHead">{{course.courseID}}</h2>
+  		<span id="classTitle">{{course.courseName}}</span>
+  	</ion-card-content>
+  	<ion-row>
+  		<ion-col>
+  			<button ion-button color="primary" clear small icon-start (click)="openComments()">
+  				<!-- Make sure to add {{className}} as variable in comment function -->
+  				<ion-icon name='text'></ion-icon>
+  				Comments/Updates
+  			</button>
+  		</ion-col>
+  	</ion-row>
+  </ion-card>
 
 </ion-content>
